@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Language Translator</title> 
+    <style>
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        #txt{
+            margin-top:200px;
+            height:30px;
+            width:300px;
+            border:2px solid black;
+        }
+        #slt{
+            background-color:orangered;
+            padding:5px 10px;
+            border-radius:5px;
+            font-size:20px;
+            font-weight:700;
+        }
+        #slt:hover{
+            border-right:pink;
+        }
+        #btn{
+            background-color:#23f1de;
+            font-weight:700;
+            color:black;
+            padding:5px 10px;
+            text-transform:uppercase;
+            border:2px solid black;
+        }
+    </style>
+</head> 
+<body bgcolor="pink"> 
+    <center>
+<form method="POST"> 
+    {% csrf_token %} 
+    <h1>Language Translator</h1>
+    <input type="text" name="translate"  id="txt"required> 
+    <br> 
+    <br>
+    <select required  id="slt" name="language"> 
+        <br>
+        <option value="Hindi">Hindi</option> 
+        <option value="Marathi">Marathi</option> 
+        <option value="German">German</option> 
+        <option value="Chinese">Chinese</option> 
+    </select> 
+    <br> 
+    <br>
+    <button type="submit" id="btn">Translate</button> 
+</form>
+</center> 
+</body> 
+</html> 
